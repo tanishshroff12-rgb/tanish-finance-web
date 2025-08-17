@@ -9,10 +9,10 @@ export default function Home() {
             Welcome to My App
           </h1>
           <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
-            A simple app with two pages about different animals.
+            A simple app with pages about different topics.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
             <Link 
               href="/dogs" 
               className="p-6 bg-neutral-900 border border-neutral-800 rounded-lg hover:border-neutral-700 transition-colors group"
@@ -34,6 +34,18 @@ export default function Home() {
               </h3>
               <p className="text-neutral-400 mt-2">
                 Learn about cats
+              </p>
+            </Link>
+
+            <Link 
+              href="/stocks" 
+              className="p-6 bg-neutral-900 border border-neutral-800 rounded-lg hover:border-neutral-700 transition-colors group"
+            >
+              <h3 className="text-lg font-semibold text-green-400 group-hover:text-green-300 transition-colors">
+                Stocks Page
+              </h3>
+              <p className="text-neutral-400 mt-2">
+                Real-time stock quotes
               </p>
             </Link>
           </div>
