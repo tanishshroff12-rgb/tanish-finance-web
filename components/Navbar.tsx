@@ -31,11 +31,10 @@ export default function Navbar() {
           />
         </Link>
         <nav className="flex items-center gap-1">
-          <NavLink href="#how">How it works</NavLink>
-          <NavLink href="#integrations">Integrations</NavLink>
-          <NavLink href="#pricing">Pricing</NavLink>
+          <NavLink href="/stocks">Stocks</NavLink>
+          <NavLink href="/hello">Hello</NavLink>
           <Link href="/signup" className="ml-3 rounded-xl bg-ink px-4 py-2 text-cream shadow-soft hover:opacity-95">
-            Start free
+            Get Started
           </Link>
         </nav>
       </div>
