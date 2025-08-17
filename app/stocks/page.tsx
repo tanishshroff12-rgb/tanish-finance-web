@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -102,7 +102,7 @@ export default function StocksPage() {
     }
   };
 
-  const fetchStockData = async (symbol: string) => {
+  const fetchStockData = useCallback(async (symbol: string) => {
     setLoading(true);
     setError(null);
     
@@ -114,14 +114,15 @@ export default function StocksPage() {
       
       setStockQuote(quoteData);
       setTimeSeriesData(timeSeriesData);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : "An unknown error occurred";
+      setError(errorMessage);
       setStockQuote(null);
       setTimeSeriesData([]);
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -132,7 +133,7 @@ export default function StocksPage() {
 
   useEffect(() => {
     fetchStockData(ticker);
-  }, []);
+  }, [fetchStockData, ticker]);
 
   const chartData = {
     labels: timeSeriesData.map(item => item.date),
