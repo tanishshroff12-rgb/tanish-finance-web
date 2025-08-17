@@ -9,8 +9,8 @@ const NavLink = ({ href, children }:{href:string;children:React.ReactNode}) => {
   const active = pathname === href;
   return (
     <Link href={href} className={clsx(
-      "text-sm md:text-base px-3 py-2 rounded-xl transition-all duration-200",
-      active ? "bg-ink text-cream shadow-soft" : "hover:bg-black/5 hover:shadow-soft"
+      "text-sm md:text-base px-3 py-2 rounded-xl transition-colors",
+      active ? "bg-ink text-cream" : "hover:bg-black/5"
     )}>
       {children}
     </Link>
@@ -19,7 +19,7 @@ const NavLink = ({ href, children }:{href:string;children:React.ReactNode}) => {
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-black/10 bg-cream/95 backdrop-blur-md shadow-soft">
+    <header className="sticky top-0 z-40 border-b border-black/10 bg-cream/80 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center group">
           <Image 
@@ -34,7 +34,7 @@ export default function Navbar() {
           <NavLink href="#how">How it works</NavLink>
           <NavLink href="#integrations">Integrations</NavLink>
           <NavLink href="#pricing">Pricing</NavLink>
-          <Link href="/signup" className="ml-3 rounded-xl bg-ink px-4 py-2 text-cream shadow-soft hover:opacity-95 hover:scale-105 transition-all duration-200">
+          <Link href="/signup" className="ml-3 rounded-xl bg-ink px-4 py-2 text-cream shadow-soft hover:opacity-95">
             Start free
           </Link>
         </nav>
