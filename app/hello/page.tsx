@@ -2,21 +2,21 @@ import Link from "next/link";
 
 export default function HelloPage() {
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <div className="container mx-auto px-4 py-16">
+    <main className="min-h-screen bg-cream text-ink">
+      <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="text-center space-y-6">
-          <h1 className="text-4xl font-bold text-blue-400">
-            Sample Calculator Page 👋
+          <h1 className="text-4xl font-display font-bold text-ink">
+            Hello from the Hello Page 👋
           </h1>
-          <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
-            This is an example page demonstrating the structure for finance calculators. 
+          <p className="text-xl text-ink/70 max-w-2xl mx-auto">
+            This is a sample page demonstrating the structure for finance calculators. 
             Each calculator will have its own dedicated page with forms, outputs, and visualizations.
           </p>
           
           <div className="mt-8">
             <Link
               href="/"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-ink text-cream hover:bg-black font-medium rounded-lg transition-colors"
             >
               ← Back to Home
             </Link>
