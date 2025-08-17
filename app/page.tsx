@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "./components/Button";
+import Button from "@/app/components/Button";
 
 export default function Home() {
   return (
@@ -34,25 +34,25 @@ export default function Home() {
       {/* Features Grid */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="surface p-6">
-            <h3 className="text-xl font-semibold mb-2">Black–Scholes</h3>
-            <p className="text-cream/70 mb-4">Advanced options pricing model for derivatives trading.</p>
+          <div className="surface p-6 hover:scale-105">
+            <h3 className="text-xl font-semibold text-ink mb-2">Black–Scholes</h3>
+            <p className="text-ink/70 mb-4">Advanced options pricing model for derivatives trading.</p>
             <Link href="#" className="inline-flex items-center text-accent hover:opacity-80 transition">
               Coming soon ➝
             </Link>
           </div>
           
-          <div className="surface p-6">
-            <h3 className="text-xl font-semibold mb-2">Investment Calculator</h3>
-            <p className="text-cream/70 mb-4">Calculate returns, compound interest, and portfolio metrics.</p>
+          <div className="surface p-6 hover:scale-105">
+            <h3 className="text-xl font-semibold text-ink mb-2">Investment Calculator</h3>
+            <p className="text-ink/70 mb-4">Calculate returns, compound interest, and portfolio metrics.</p>
             <Link href="#" className="inline-flex items-center text-accent hover:opacity-80 transition">
               Coming soon ➝
             </Link>
           </div>
           
-          <div className="surface p-6">
-            <h3 className="text-xl font-semibold mb-2">Strategy Visualizer</h3>
-            <p className="text-cream/70 mb-4">Visualize trading strategies and risk-reward scenarios.</p>
+          <div className="surface p-6 hover:scale-105">
+            <h3 className="text-xl font-semibold text-ink mb-2">Strategy Visualizer</h3>
+            <p className="text-ink/70 mb-4">Visualize trading strategies and risk-reward scenarios.</p>
             <Link href="#" className="inline-flex items-center text-accent hover:opacity-80 transition">
               Coming soon ➝
             </Link>
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-stone/30 py-8 mt-16">
+      <footer className="border-t border-black/10 py-8 mt-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-sm text-ink/50">
             Built with Next.js and Tailwind CSS. 
