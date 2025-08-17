@@ -1,31 +1,23 @@
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Nav from "./components/Nav";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
+export const metadata: Metadata = {
+  title: "PostPilot — Your posts, done.",
+  description: "Auto-generate and schedule posts to Instagram & Google Business.",
+};
 
-export const metadata = { title: "Tanish Finance" };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${playfair.variable} min-h-screen bg-cream text-ink`}
-      >
-        <Nav />
-        {children}
+      <body className={inter.className}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
